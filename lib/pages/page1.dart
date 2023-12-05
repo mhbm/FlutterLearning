@@ -171,14 +171,6 @@ class Pagina1 extends StatelessWidget {
                               color: Colors.cyan[900],
                             ),
                           ),
-                          Padding(
-                            padding: const EdgeInsets.all(8.0),
-                            child: Container(
-                              width: 40,
-                              height: 40,
-                              color: Colors.cyan[900],
-                            ),
-                          ),
                         ],
                       ),
                     ),
@@ -203,7 +195,7 @@ class Pagina1 extends StatelessWidget {
                       child: Padding(
                         padding: EdgeInsets.all(30),
                         child: Container(
-                          height: 500,
+                          height: 600,
                           color: Colors.amber,
                           child: Column(
                             mainAxisAlignment: MainAxisAlignment.start,
@@ -403,9 +395,8 @@ class Pagina1 extends StatelessWidget {
                                               },
                                             ),
                                           ),
-                                          Center(
-                                            child:
-                                                const Text("15 days returns"),
+                                          const Center(
+                                            child: Text("15 days returns"),
                                           ),
                                         ],
                                       ),
@@ -430,8 +421,8 @@ class Pagina1 extends StatelessWidget {
                                               },
                                             ),
                                           ),
-                                          Center(
-                                            child: const Text("COD available"),
+                                          const Center(
+                                            child: Text("COD available"),
                                           ),
                                         ],
                                       ),
@@ -456,15 +447,58 @@ class Pagina1 extends StatelessWidget {
                                               },
                                             ),
                                           ),
-                                          Center(
-                                            child: const Text("Free Delivery"),
+                                          const Center(
+                                            child: Text("Free Delivery"),
                                           ),
                                         ],
                                       ),
                                     ),
                                   ],
                                 ),
-                              )
+                              ),
+                              const Padding(
+                                padding: EdgeInsets.only(top: 5, left: 20),
+                                child: Row(
+                                  children: [
+                                    Text("Delivery"),
+                                  ],
+                                ),
+                              ),
+                              Padding(
+                                padding: EdgeInsets.only(
+                                    top: 5, left: 20, right: 20),
+                                child: Row(
+                                  children: [
+                                    Expanded(
+                                      child: TextField(
+                                        decoration: InputDecoration(
+                                          hintText: 'Enter Pincode',
+                                          border: OutlineInputBorder(),
+                                          contentPadding: EdgeInsets.symmetric(
+                                              vertical: 12.0,
+                                              horizontal:
+                                                  12.0), // Ajuste o padding interno
+                                          isDense:
+                                              true, // Reduz a altura do TextField
+                                          hintStyle: TextStyle(
+                                              fontSize:
+                                                  14.0), // Ajuste o tamanho do texto
+                                        ),
+                                      ),
+                                    ),
+                                    Expanded(child: Container())
+                                  ],
+                                ),
+                              ),
+                              Padding(padding: EdgeInsets.only(left: 20, top: 15),
+                              child: Row(children: [
+                                 Icon(Icons.gps_fixed_rounded),
+                                Padding(
+                                  padding: const EdgeInsets.only(left: 10),
+                                  child: Text("Use my current location"),
+                                ),
+                                
+                              ]),)
                             ],
                           ),
                         ),
