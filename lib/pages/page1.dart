@@ -119,7 +119,7 @@ class Pagina1 extends StatelessWidget {
             ),
           ),
           Expanded(
-            flex: 5,
+            flex: 4,
             child: Container(
               height: 800,
               color: Colors.grey[500],
@@ -191,55 +191,108 @@ class Pagina1 extends StatelessWidget {
                       ),
                     ),
                     Expanded(
-                      flex: 3,
+                      flex: 4,
                       child: Padding(
                         padding: EdgeInsets.all(30),
                         child: Container(
-                          height: 600,
                           color: Colors.amber,
                           child: Column(
                             mainAxisAlignment: MainAxisAlignment.start,
+                            crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              const Padding(
-                                padding: EdgeInsets.all(20),
-                                child: Text(
-                                    "OnePlus 10R 5G (Sierra Black, 12GB RAM, 256GB Storage,150W SuperVOOC)"),
+                              const Expanded(
+                                flex: 1,
+                                child: Padding(
+                                  padding: EdgeInsets.only(top: 5),
+                                  child: Center(
+                                    child: Text(
+                                        softWrap: true,
+                                        "OnePlus 10R 5G (Sierra Black, 12GB RAM, 256GB Storage,150W SuperVOOC)"),
+                                  ),
+                                ),
                               ),
-                              Padding(
-                                padding: const EdgeInsets.only(top: 20),
-                                child: Container(
-                                  child: const Row(
-                                    mainAxisAlignment:
-                                        MainAxisAlignment.spaceBetween,
-                                    children: [
-                                      Expanded(
-                                        flex: 3,
-                                        child: Padding(
-                                          padding: EdgeInsets.only(left: 20),
-                                          child: Row(
-                                            children: [
-                                              Icon(Icons.star),
-                                              SizedBox(width: 5),
-                                              Text(
-                                                '4.3/5 (112 Rating | 94 Reviews)',
-                                                style: TextStyle(
-                                                  fontSize: 16,
-                                                  fontWeight: FontWeight.bold,
+                              Expanded(
+                                flex: 1,
+                                child: Padding(
+                                  padding: const EdgeInsets.only(top: 5),
+                                  child: Container(
+                                    child: const Row(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.spaceBetween,
+                                      children: [
+                                        Expanded(
+                                          flex: 3,
+                                          child: Padding(
+                                            padding: EdgeInsets.only(left: 20),
+                                            child: Row(
+                                              children: [
+                                                Icon(Icons.star),
+                                                SizedBox(width: 5),
+                                                Expanded(
+                                                  child: Text(
+                                                    '4.3/5 (112 Rating | 94 Reviews)',
+                                                    style: TextStyle(
+                                                      fontSize: 16,
+                                                      fontWeight:
+                                                          FontWeight.bold,
+                                                    ),
+                                                  ),
                                                 ),
-                                              ),
-                                            ],
+                                              ],
+                                            ),
                                           ),
                                         ),
+                                        Expanded(
+                                          flex: 1,
+                                          child: Padding(
+                                            padding: EdgeInsets.only(right: 20),
+                                            child: Row(
+                                              mainAxisAlignment:
+                                                  MainAxisAlignment.end,
+                                              children: [
+                                                Icon(Icons.share),
+                                              ],
+                                            ),
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                ),
+                              ),
+                              Expanded(
+                                flex: 1,
+                                child: Padding(
+                                  padding: EdgeInsets.only(top: 5, left: 20),
+                                  child: Row(
+                                    children: [
+                                      const Text(
+                                        "\$499",
+                                        style: TextStyle(
+                                            fontSize: 20,
+                                            fontWeight: FontWeight.bold),
                                       ),
-                                      Expanded(
-                                        flex: 1,
-                                        child: Padding(
-                                          padding: EdgeInsets.only(right: 20),
-                                          child: Row(
-                                            mainAxisAlignment:
-                                                MainAxisAlignment.end,
-                                            children: [
-                                              Icon(Icons.share),
+                                      Padding(
+                                        padding:
+                                            const EdgeInsets.only(left: 10),
+                                        child: RichText(
+                                          text: const TextSpan(
+                                            style: TextStyle(
+                                              fontSize:
+                                                  18, // Tamanho maior para o cifrão
+                                              color: Colors.black,
+                                            ),
+                                            children: <TextSpan>[
+                                              TextSpan(
+                                                text: '\$599',
+                                                style: TextStyle(
+                                                  decoration: TextDecoration
+                                                      .lineThrough, // Risco no meio do texto
+                                                  fontSize:
+                                                      14, // Tamanho menor para o número
+                                                  color: Colors.black,
+                                                ),
+                                              ),
                                             ],
                                           ),
                                         ),
@@ -248,259 +301,267 @@ class Pagina1 extends StatelessWidget {
                                   ),
                                 ),
                               ),
-                              Padding(
-                                padding: EdgeInsets.only(top: 20, left: 20),
-                                child: Row(
-                                  children: [
-                                    const Text(
-                                      "\$499",
-                                      style: TextStyle(
-                                          fontSize: 20,
-                                          fontWeight: FontWeight.bold),
-                                    ),
-                                    Padding(
-                                      padding: const EdgeInsets.only(left: 10),
-                                      child: RichText(
-                                        text: const TextSpan(
-                                          style: TextStyle(
-                                            fontSize:
-                                                18, // Tamanho maior para o cifrão
+                              const Expanded(
+                                flex: 1,
+                                child: Padding(
+                                  padding: EdgeInsets.only(top: 5, left: 20),
+                                  child: Row(
+                                    children: [
+                                      Text("Shades"),
+                                      Icon(Icons.arrow_drop_down_outlined)
+                                    ],
+                                  ),
+                                ),
+                              ),
+                              Expanded(
+                                flex: 1,
+                                child: Padding(
+                                  padding: EdgeInsets.only(left: 20, top: 5),
+                                  child: Row(
+                                    mainAxisAlignment: MainAxisAlignment.start,
+                                    children: [
+                                      Padding(
+                                        padding:
+                                            const EdgeInsets.only(right: 8),
+                                        child: Container(
+                                          width: 20,
+                                          height: 20,
+                                          decoration: const BoxDecoration(
+                                            shape: BoxShape
+                                                .circle, // Define a forma como círculo
                                             color: Colors.black,
                                           ),
-                                          children: <TextSpan>[
-                                            TextSpan(
-                                              text: '\$599',
-                                              style: TextStyle(
-                                                decoration: TextDecoration
-                                                    .lineThrough, // Risco no meio do texto
-                                                fontSize:
-                                                    14, // Tamanho menor para o número
-                                                color: Colors.black,
+                                        ),
+                                      ),
+                                      Padding(
+                                        padding:
+                                            const EdgeInsets.only(right: 8),
+                                        child: Container(
+                                          width: 20,
+                                          height: 20,
+                                          decoration: const BoxDecoration(
+                                            shape: BoxShape.circle,
+                                            color: Colors.green,
+                                          ),
+                                        ),
+                                      ),
+                                      Padding(
+                                        padding:
+                                            const EdgeInsets.only(right: 8),
+                                        child: Container(
+                                          width: 20,
+                                          height: 20,
+                                          decoration: const BoxDecoration(
+                                            shape: BoxShape.circle,
+                                            color: Colors.grey,
+                                          ),
+                                        ),
+                                      ),
+                                      Padding(
+                                        padding:
+                                            const EdgeInsets.only(right: 8),
+                                        child: Container(
+                                          width: 20,
+                                          height: 20,
+                                          decoration: const BoxDecoration(
+                                            shape: BoxShape.circle,
+                                            color: Colors.red,
+                                          ),
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ),
+                              Expanded(
+                                flex: 2,
+                                child: Padding(
+                                  padding: EdgeInsets.only(
+                                    top: 5,
+                                    left: 20,
+                                  ),
+                                  child: Row(
+                                    children: [
+                                      Expanded(
+                                        child: Column(
+                                          children: [
+                                            Container(
+                                              color: Colors.blue,
+                                              child: LayoutBuilder(
+                                                builder: (BuildContext context,
+                                                    BoxConstraints
+                                                        constraints) {
+                                                  return Icon(
+                                                    Icons.verified_outlined,
+                                                    size: constraints.maxWidth *
+                                                        0.4,
+                                                    color: Colors.white,
+                                                  );
+                                                },
                                               ),
+                                            ),
+                                            const Text("100% Authentic"),
+                                          ],
+                                        ),
+                                      ),
+                                      Expanded(
+                                        child: Column(
+                                          children: [
+                                            Container(
+                                              color: Colors.blue,
+                                              child: LayoutBuilder(
+                                                builder: (BuildContext context,
+                                                    BoxConstraints
+                                                        constraints) {
+                                                  return Icon(
+                                                    Icons.turn_left_outlined,
+                                                    size: constraints.maxWidth *
+                                                        0.4,
+                                                    color: Colors.white,
+                                                  );
+                                                },
+                                              ),
+                                            ),
+                                            const Center(
+                                              child: Text("15 days returns"),
                                             ),
                                           ],
                                         ),
                                       ),
-                                    ),
-                                  ],
+                                      Expanded(
+                                        child: Column(
+                                          children: [
+                                            Container(
+                                              color: Colors.blue,
+                                              child: LayoutBuilder(
+                                                builder: (BuildContext context,
+                                                    BoxConstraints
+                                                        constraints) {
+                                                  return Icon(
+                                                    Icons.co2_rounded,
+                                                    size: constraints.maxWidth *
+                                                        0.4,
+                                                    color: Colors.white,
+                                                  );
+                                                },
+                                              ),
+                                            ),
+                                            const Center(
+                                              child: Text("COD available"),
+                                            ),
+                                          ],
+                                        ),
+                                      ),
+                                      Expanded(
+                                        child: Column(
+                                          children: [
+                                            Container(
+                                              color: Colors.blue,
+                                              child: LayoutBuilder(
+                                                builder: (BuildContext context,
+                                                    BoxConstraints
+                                                        constraints) {
+                                                  return Icon(
+                                                    Icons.fire_truck_outlined,
+                                                    size: constraints.maxWidth *
+                                                        0.4,
+                                                    color: Colors.white,
+                                                  );
+                                                },
+                                              ),
+                                            ),
+                                            const Center(
+                                              child: Text("Free Delivery"),
+                                            ),
+                                          ],
+                                        ),
+                                      ),
+                                    ],
+                                  ),
                                 ),
                               ),
-                              const Padding(
-                                padding: EdgeInsets.only(top: 20, left: 20),
-                                child: Row(
-                                  children: [
-                                    Text("Shades"),
-                                    Icon(Icons.arrow_drop_down_outlined)
-                                  ],
+                              const Expanded(
+                                child: Padding(
+                                  padding: EdgeInsets.only(left: 20),
+                                  child: Row(
+                                    children: [
+                                      Text("Delivery"),
+                                    ],
+                                  ),
+                                ),
+                              ),
+                              Expanded(
+                                child: Padding(
+                                  padding: EdgeInsets.only(left: 20, right: 20),
+                                  child: Row(
+                                    children: [
+                                      Expanded(
+                                        child: TextField(
+                                          decoration: InputDecoration(
+                                            hintText: 'Enter Pincode',
+                                            border: OutlineInputBorder(),
+                                            contentPadding: EdgeInsets.symmetric(
+                                                vertical: 8.0,
+                                                horizontal:
+                                                    8.0), // Ajuste o padding interno
+                                            isDense:
+                                                true, // Reduz a altura do TextField
+                                            hintStyle: TextStyle(
+                                                fontSize:
+                                                    14.0), // Ajuste o tamanho do texto
+                                          ),
+                                        ),
+                                      ),
+                                      Expanded(child: Container())
+                                    ],
+                                  ),
                                 ),
                               ),
                               Padding(
-                                padding: EdgeInsets.only(left: 20, top: 20),
-                                child: Row(
-                                  mainAxisAlignment: MainAxisAlignment.start,
-                                  children: [
-                                    Padding(
-                                      padding: const EdgeInsets.all(8.0),
-                                      child: Container(
-                                        width: 20,
-                                        height: 20,
-                                        decoration: const BoxDecoration(
-                                          shape: BoxShape
-                                              .circle, // Define a forma como círculo
-                                          color: Colors.black,
-                                        ),
-                                      ),
-                                    ),
-                                    Padding(
-                                      padding: const EdgeInsets.all(8.0),
-                                      child: Container(
-                                        width: 20,
-                                        height: 20,
-                                        decoration: const BoxDecoration(
-                                          shape: BoxShape.circle,
-                                          color: Colors.green,
-                                        ),
-                                      ),
-                                    ),
-                                    Padding(
-                                      padding: const EdgeInsets.all(8.0),
-                                      child: Container(
-                                        width: 20,
-                                        height: 20,
-                                        decoration: const BoxDecoration(
-                                          shape: BoxShape.circle,
-                                          color: Colors.grey,
-                                        ),
-                                      ),
-                                    ),
-                                    Padding(
-                                      padding: const EdgeInsets.all(8.0),
-                                      child: Container(
-                                        width: 20,
-                                        height: 20,
-                                        decoration: const BoxDecoration(
-                                          shape: BoxShape.circle,
-                                          color: Colors.red,
-                                        ),
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                              Padding(
-                                padding: EdgeInsets.only(top: 20, left: 20),
-                                child: Row(
-                                  children: [
-                                    Padding(
-                                      padding: const EdgeInsets.all(8.0),
-                                      child: Column(
-                                        children: [
-                                          Container(
-                                            height: 90,
-                                            width: 90,
-                                            color: Colors.blue,
-                                            child: LayoutBuilder(
-                                              builder: (BuildContext context,
-                                                  BoxConstraints constraints) {
-                                                return Icon(
-                                                  Icons.verified_outlined,
-                                                  size: constraints.maxWidth *
-                                                      0.6, // Calcula o tamanho com base na largura do Container
-                                                  color: Colors.white,
-                                                );
-                                              },
-                                            ),
-                                          ),
-                                          const Text("100% Authentic"),
-                                        ],
-                                      ),
-                                    ),
-                                    Padding(
-                                      padding: const EdgeInsets.all(8.0),
-                                      child: Column(
-                                        children: [
-                                          Container(
-                                            height: 90,
-                                            width: 90,
-                                            color: Colors.blue,
-                                            child: LayoutBuilder(
-                                              builder: (BuildContext context,
-                                                  BoxConstraints constraints) {
-                                                return Icon(
-                                                  Icons.turn_left_outlined,
-                                                  size: constraints.maxWidth *
-                                                      0.6, // Calcula o tamanho com base na largura do Container
-                                                  color: Colors.white,
-                                                );
-                                              },
-                                            ),
-                                          ),
-                                          const Center(
-                                            child: Text("15 days returns"),
-                                          ),
-                                        ],
-                                      ),
-                                    ),
-                                    Padding(
-                                      padding: const EdgeInsets.all(8.0),
-                                      child: Column(
-                                        children: [
-                                          Container(
-                                            height: 90,
-                                            width: 90,
-                                            color: Colors.blue,
-                                            child: LayoutBuilder(
-                                              builder: (BuildContext context,
-                                                  BoxConstraints constraints) {
-                                                return Icon(
-                                                  Icons.co2_rounded,
-                                                  size: constraints.maxWidth *
-                                                      0.6, // Calcula o tamanho com base na largura do Container
-                                                  color: Colors.white,
-                                                );
-                                              },
-                                            ),
-                                          ),
-                                          const Center(
-                                            child: Text("COD available"),
-                                          ),
-                                        ],
-                                      ),
-                                    ),
-                                    Padding(
-                                      padding: const EdgeInsets.all(8.0),
-                                      child: Column(
-                                        children: [
-                                          Container(
-                                            height: 90,
-                                            width: 90,
-                                            color: Colors.blue,
-                                            child: LayoutBuilder(
-                                              builder: (BuildContext context,
-                                                  BoxConstraints constraints) {
-                                                return Icon(
-                                                  Icons.fire_truck_outlined,
-                                                  size: constraints.maxWidth *
-                                                      0.6, // Calcula o tamanho com base na largura do Container
-                                                  color: Colors.white,
-                                                );
-                                              },
-                                            ),
-                                          ),
-                                          const Center(
-                                            child: Text("Free Delivery"),
-                                          ),
-                                        ],
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                              const Padding(
-                                padding: EdgeInsets.only(top: 5, left: 20),
-                                child: Row(
-                                  children: [
-                                    Text("Delivery"),
-                                  ],
-                                ),
-                              ),
-                              Padding(
-                                padding: EdgeInsets.only(
-                                    top: 5, left: 20, right: 20),
-                                child: Row(
-                                  children: [
-                                    Expanded(
-                                      child: TextField(
-                                        decoration: InputDecoration(
-                                          hintText: 'Enter Pincode',
-                                          border: OutlineInputBorder(),
-                                          contentPadding: EdgeInsets.symmetric(
-                                              vertical: 12.0,
-                                              horizontal:
-                                                  12.0), // Ajuste o padding interno
-                                          isDense:
-                                              true, // Reduz a altura do TextField
-                                          hintStyle: TextStyle(
-                                              fontSize:
-                                                  14.0), // Ajuste o tamanho do texto
-                                        ),
-                                      ),
-                                    ),
-                                    Expanded(child: Container())
-                                  ],
-                                ),
-                              ),
-                              Padding(padding: EdgeInsets.only(left: 20, top: 15),
-                              child: Row(children: [
-                                 Icon(Icons.gps_fixed_rounded),
-                                Padding(
-                                  padding: const EdgeInsets.only(left: 10),
-                                  child: Text("Use my current location"),
-                                ),
-                                
-                              ]),)
+                                padding: EdgeInsets.only(left: 20, top: 15, bottom: 20),
+                                child: Row(children: [
+                                  Icon(Icons.gps_fixed_rounded),
+                                  Padding(
+                                    padding: const EdgeInsets.only(left: 10),
+                                    child: Text("Use my current location"),
+                                  ),
+                                ]),
+                              )
                             ],
                           ),
+                          //  Padding(
+                          //       padding: EdgeInsets.only(
+                          //           top: 5, left: 20, right: 20),
+                          //       child: Row(
+                          //         children: [
+                          //           Expanded(
+                          //             child: TextField(
+                          //               decoration: InputDecoration(
+                          //                 hintText: 'Enter Pincode',
+                          //                 border: OutlineInputBorder(),
+                          //                 contentPadding: EdgeInsets.symmetric(
+                          //                     vertical: 12.0,
+                          //                     horizontal:
+                          //                         12.0), // Ajuste o padding interno
+                          //                 isDense:
+                          //                     true, // Reduz a altura do TextField
+                          //                 hintStyle: TextStyle(
+                          //                     fontSize:
+                          //                         14.0), // Ajuste o tamanho do texto
+                          //               ),
+                          //             ),
+                          //           ),
+                          //           Expanded(child: Container())
+                          //         ],
+                          //       ),
+                          //     ),
+                          //     Padding(padding: EdgeInsets.only(left: 20, top: 15),
+                          //     child: Row(children: [
+                          //        Icon(Icons.gps_fixed_rounded),
+                          //       Padding(
+                          //         padding: const EdgeInsets.only(left: 10),
+                          //         child: Text("Use my current location"),
+                          //       ),
                         ),
                       ),
                     )
@@ -509,6 +570,39 @@ class Pagina1 extends StatelessWidget {
               ),
             ),
           ),
+          Expanded(
+            flex: 1,
+            child: Row(
+              children: [
+                Expanded(
+                  flex: 1,
+                  child: Padding(
+                    padding: const EdgeInsets.only(top: 8, left: 8),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Expanded(
+                          flex: 1,
+                          child:
+                              Container(height: 50, color: Colors.deepOrange),
+                        ),
+                        SizedBox(width: 8),
+                        Expanded(
+                          flex: 1,
+                          child: Container(
+                              height: 50, color: Colors.deepOrangeAccent),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+                Expanded(
+                  flex: 1,
+                  child: Container(),
+                ),
+              ],
+            ),
+          )
         ],
       ),
     );
