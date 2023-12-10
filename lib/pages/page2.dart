@@ -171,11 +171,39 @@ class Pagina2 extends StatelessWidget {
             child: Column(
               children: [
                 Padding(
-                  padding: EdgeInsets.only(top: 33, left: 20),
+                  padding: EdgeInsets.only(top: 76, left: 20),
                   child: Expanded(
-                    child: Container(
-                      height: 20,
-                      color: Colors.amber,
+                    child: Column(
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Container(
+                            height: 300,
+                            width: 300,
+                            color: Colors.deepOrange,
+                          ),
+                        ),
+                        const Padding(
+                          padding:
+                              EdgeInsets.only(top: 33, left: 20, right: 20),
+                          child: Expanded(
+                            child: Text(
+                              "A powerful Saas analytics application that is very easy to use",
+                              textAlign: TextAlign.center,
+                              style: TextStyle(fontSize: 22),
+                            ),
+                          ),
+                        ),
+                        const Padding(
+                          padding:
+                              EdgeInsets.only(top: 33, left: 20, right: 20),
+                          child: Expanded(
+                            child: Text(
+                                "The fastest and simple way to generate grwoing bussiness solutions with our products",
+                                textAlign: TextAlign.center),
+                          ),
+                        ),
+                      ],
                     ),
                   ),
                 )
